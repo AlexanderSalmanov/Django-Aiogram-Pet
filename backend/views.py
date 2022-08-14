@@ -43,9 +43,6 @@ login_view = LoginView.as_view()
 def profile_page(request):
     user_obj = request.user
 
-    formula = match({'username': user_obj.username})
-    airtable_user_sheet = table.first(formula=formula)
-
     all_entries = table.all()
     user_entry = None
     for entry in all_entries:

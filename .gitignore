@@ -2,6 +2,6 @@ env/*
 */__pycache__/*
 tg_bot/sqlite_connector.py
 tg_bot/settings.py
-db.sqlite3
 Procfile
 .env
+db.sqlite3

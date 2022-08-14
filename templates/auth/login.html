@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+{% load bootstrap5 %}
+
+{% block content %}
+  <h3 align='center'>Log In!</h3>
+  <form method="post">
+    {% csrf_token %}
+
+    {% bootstrap_form form %}
+
+    <div class="d-grid gap-3">
+          <button type="submit" class='btn btn-dark' name="button">Log In <i class='fa fa-sign-in'></i></button>
+    </div>
+
+  </form>
+{% endblock %}

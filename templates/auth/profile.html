@@ -1,0 +1,48 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+  <h1 align='center'>Your Profile Page</h1>
+  <hr>
+  <div class="row">
+
+      <div class="col">
+        <div class="h-100 p-3 bg-light border rounded-3">
+          <h2 class='text-muted'><i class='fa fa-address-book-o'></i> Profile Data</h2><hr>
+          <table class='table'>
+            <thead>
+              <th>Site Username</th>
+              <th>Site Email</th>
+            </thead>
+            <tr>
+              <td>{{username}}</td>
+              <td>{{email}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="h-100 p-3 bg-light border rounded-3">
+            <h2 class='text-muted'><i class='fa fa-telegram'></i> Telegram Data</h2><hr>
+            <table class='table'>
+              <thead>
+                <th>Name</th>
+                <th>Username</th>
+                <th>User ID</th>
+              </thead>
+              <tr>
+                <td>{{tg_data.tg_fullname}}</td>
+                <td><a href="https://t.me/{{tg_data.tg_username}}" class='btn btn-outline-secondary'>
+                  @{{tg_data.tg_username}}
+                </a></td>
+                <td>{{tg_data.tg_id}}</td>
+              </tr>
+            </table>
+        </div>
+      </div>
+
+  </div>
+
+
+{% endblock %}

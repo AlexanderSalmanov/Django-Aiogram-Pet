@@ -1,0 +1,24 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+  <h1>Home Page {% if user.is_anonymous %}{% else %} for {{user.username}} {% endif %}</h1>
+  {% if user.is_authenticated %}
+    <a href="{% url 'profile' %}">Go to your profile page</a>
+  {% endif %}
+  <hr>
+
+  <p class='h3 text-muted'>Authorization options</p>
+  <ul class='list-unstyled'>
+    {% if user.is_authenticated %}
+    <li>
+      <a href="{% url 'logout' %}">Log Out</a>
+    </li>
+    {% else %}
+    <li>
+      <a href="{% url 'login' %}">Log In</a>
+    </li>
+    {% endif %}
+  </ul>
+
+{% endblock %}

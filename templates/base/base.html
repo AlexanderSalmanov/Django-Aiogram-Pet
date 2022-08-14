@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load bootstrap5 %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' />
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+    <title></title>
+    <style media="screen">
+      body{
+        /* margin: auto; */
+        max-width: 50%;
+        margin-top: 15%;
+        margin-left: 25%;
+        margin-right: 25%;
+        padding: 20px;
+        background-color: #fff;
+        -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+        box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+      }
+
+      .form-control{
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
+
+      label{
+        font-weight: 500;
+        font-size: 1.3em;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      {% block content %}
+
+      {% endblock %}
+    </div>
+
+
+  </body>
+</html>

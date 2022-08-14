@@ -1,0 +1,7 @@
+env/*
+*/__pycache__/*
+tg_bot/sqlite_connector.py
+tg_bot/settings.py
+db.splite3
+Procfile
+.env

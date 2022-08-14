@@ -156,7 +156,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGOUT_REDIRECT_URL = '/'
 
-# BOT_API_TOKEN = '5433140434:AAE55ODXqspe8NMORE624e6C6kdardfNc6o'
 BOT_API_TOKEN = os.environ.get('BOT_API_TOKEN')
 BOOTSTRAP5 = {
 
